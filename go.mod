@@ -3,6 +3,7 @@ module github.com/systay/mindful-ai
 go 1.23.3
 
 require (
+	github.com/joho/godotenv v1.5.1
 	github.com/sashabaranov/go-openai v1.36.0
 	github.com/spf13/cobra v1.8.1
 	github.com/stretchr/testify v1.10.0

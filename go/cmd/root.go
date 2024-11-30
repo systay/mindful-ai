@@ -16,6 +16,8 @@ func Execute() {
 
 	root.CompletionOptions.HiddenDefaultCmd = true
 
+	root.AddCommand(scriptCmd())
+
 	err := root.Execute()
 	fail(err)
 }

@@ -3,13 +3,14 @@ package script_generator
 import (
 	"context"
 	"fmt"
+	"github.com/systay/mindful-ai/go/utils"
 	"os"
 	"testing"
 )
 import "github.com/stretchr/testify/require"
 
 func TestName(t *testing.T) {
-	err := LoadTestEnv()
+	err := utils.LoadEnv()
 	require.NoError(t, err)
 	apiKey := os.Getenv("OPENAI_API_KEY")
 	generator := NewScriptGenerator(apiKey)

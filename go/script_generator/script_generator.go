@@ -21,6 +21,10 @@ type MeditationScript struct {
 	TimingMarkers map[string]string `json:"timing_markers"`
 }
 
+func (s MeditationScript) ToString() string {
+	return fmt.Sprintf("Content: %s\nTimingMarkers: %v", s.Content, s.TimingMarkers)
+}
+
 // ScriptGenerator handles the generation of meditation scripts
 type ScriptGenerator struct {
 	client *openai.Client
@@ -66,7 +70,7 @@ func (g *ScriptGenerator) GenerateScript(ctx context.Context, req MeditationRequ
 	// Parse the response into our struct
 	var script MeditationScript
 	if err := json.Unmarshal([]byte(resp.Choices[0].Message.Content), &script); err != nil {
-		return nil, fmt.Errorf("failed to parse script: %w", err)
+		return nil, fmt.Errorf("failed to parse script: %w\ncontent: %s", err, resp.Choices[0].Message.Content)
 	}
 
 	return &script, nil

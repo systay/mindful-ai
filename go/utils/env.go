@@ -6,7 +6,7 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func LoadTestEnv() error {
+func LoadEnv() error {
 	// Look for .env file in parent directories up to 3 levels up
 	envFiles := []string{
 		".env",
