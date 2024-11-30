@@ -1,7 +1,8 @@
-package services
+package utils
 
 import (
 	"errors"
+
 	"github.com/joho/godotenv"
 )
 

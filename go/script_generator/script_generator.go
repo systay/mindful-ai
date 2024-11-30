@@ -1,9 +1,10 @@
-package services
+package script_generator
 
 import (
 	"context"
 	"encoding/json"
 	"fmt"
+
 	"github.com/sashabaranov/go-openai"
 )
 

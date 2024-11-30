@@ -1,4 +1,4 @@
-package services
+package script_generator
 
 import (
 	"context"
