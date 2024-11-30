@@ -30,3 +30,4 @@ go.work
 .env
 *.env.local
 
+/mindful
