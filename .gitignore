@@ -1,0 +1,32 @@
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Flutter
+**/build/
+**/ios/Pods/
+**/android/.gradle
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/build/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Environment files
+.env
+*.env.local
+
