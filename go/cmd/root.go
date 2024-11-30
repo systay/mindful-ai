@@ -17,9 +17,7 @@ func Execute() {
 	root.CompletionOptions.HiddenDefaultCmd = true
 
 	err := root.Execute()
-	if err != nil {
-		os.Exit(1)
-	}
+	fail(err)
 }
 
 func fail(err error, messages ...string) {

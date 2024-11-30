@@ -1,4 +1,4 @@
-package mindful
+package main
 
 import (
 	"github.com/systay/mindful-ai/go/cmd"
