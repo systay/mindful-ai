@@ -9,11 +9,8 @@ import (
 	"os"
 )
 
-// Replace with your ElevenLabs API key
-const apiKey = "YOUR_ELEVENLABS_API_KEY"
-
 // APIEndpoint is the ElevenLabs TTS API endpoint
-const APIEndpoint = "https://api.elevenlabs.io/v1/text-to-speech/YOUR_VOICE_ID"
+const APIEndpoint = "https://api.elevenlabs.io/v1/text-to-speech/Mh5T6J41B2fct7cbu5xg"
 
 // TTSRequest represents the request payload for the TTS API
 type TTSRequest struct {
@@ -29,7 +26,7 @@ func main() {
 	text := "Hello, this is a sample text to speech conversion using ElevenLabs API and Go."
 
 	// Call the function to get audio and save to a file
-	err := TextToSpeech(text, "output_audio.mp3")
+	err := TextToSpeech(text, "output_audio.mp3", "")
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
 	} else {
@@ -39,7 +36,7 @@ func main() {
 
 // TextToSpeech takes a string and converts it to speech using ElevenLabs API
 // It saves the resulting audio to the specified filename
-func TextToSpeech(text, filename string) error {
+func TextToSpeech(text, filename, apiKey string) error {
 	// Create the request payload
 	var reqPayload TTSRequest
 	reqPayload.Text = text
